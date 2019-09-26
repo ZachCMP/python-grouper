@@ -47,9 +47,6 @@ class InputInterface:
     # self.close_button = Button(self.frame, text="Submit Players", command=master.quit)
     # self.close_button.pack()
 
-  def greet(self, event):
-    print("Greetings!")
-
   def submit_players(self):
     group_size = self.group_size_entry.get()
     self.submit(self.playerlist, int(group_size))
@@ -67,7 +64,6 @@ class InputInterface:
     ind = self.listbox.curselection()[0]
     self.playerlist.pop(ind)
     self.refresh_list()
-    print(ind)
 
   def addplayer(self, event=None):
     text = self.textarea.get()
